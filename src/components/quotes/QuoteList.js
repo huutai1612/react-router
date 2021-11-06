@@ -15,14 +15,18 @@ const sortQuotes = (quotes, ascending) => {
 
 const QuoteList = (props) => {
 	const history = useHistory();
-
 	const location = useLocation();
-
 	const queryParam = new URLSearchParams(location.search);
 	const isSortAscending = queryParam.get('sort') === 'asc';
 
 	const sortingClickHandler = () => {
-		history.push(`/quotes?sort=` + (isSortAscending ? 'desc' : 'asc'));
+		history.push({
+			pathname: location.pathname,
+			search: `?sort=${isSortAscending ? 'desc' : 'asc'}`,
+		});
+		// history.push(
+		// 	location.pathname + '?sort=' + (isSortAscending ? 'desc' : 'asc'),
+		// );
 	};
 
 	const sortedQuotes = sortQuotes(props.quotes, isSortAscending);
