@@ -1,23 +1,27 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './MainNavigation.module.css';
 
 const MainHeader = (props) => {
 	return (
-		<nav className={styles.nav}>
-			<section className={styles.header}>
-				<div>
-					<h2 className={styles.logo}>Great Quotes</h2>
-				</div>
+		<header className={styles.header}>
+			<div className={styles.logo}>Great Quotes</div>
+			<nav className={styles.nav}>
 				<ul>
 					<li>
-						<Link to='/quotes'> All Quotes</Link>
+						<NavLink activeClassName={styles.active} to='/quotes'>
+							{' '}
+							All Quotes
+						</NavLink>
 					</li>
 					<li>
-						<Link to='/new-quote'> Add a Quotes</Link>
+						<NavLink activeClassName={styles.active} to='/new-quote'>
+							{' '}
+							Add a Quotes
+						</NavLink>
 					</li>
 				</ul>
-			</section>
-		</nav>
+			</nav>
+		</header>
 	);
 };
 
