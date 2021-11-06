@@ -10,8 +10,19 @@ const useInput = (validateInput) => {
 
 	const isValid = validateInput(enteredValue);
 	const hasError = !isValid && isBlur;
+	const resetInput = () => {
+		setEnterValue('');
+		setIsBlur(false);
+	};
 
-	return { enteredValue, onChangeHandler, onBlurHandler, isValid, hasError };
+	return {
+		enteredValue,
+		onChangeHandler,
+		onBlurHandler,
+		isValid,
+		hasError,
+		resetInput,
+	};
 };
 
 export default useInput;
