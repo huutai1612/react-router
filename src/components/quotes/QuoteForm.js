@@ -1,4 +1,4 @@
-import useInput from '../hooks/use-input';
+import useInput from '../../hooks/use-input';
 import { Prompt } from 'react-router-dom';
 import Card from '../UI/Card';
 import LoadingSpinner from '../UI/LoadingSpinner';
