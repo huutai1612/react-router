@@ -1,7 +1,14 @@
 .comments {
-  text-align: center;
+	text-align: center;
 }
 
 .comments > button {
-  font-size: 1.25rem;
+	font-size: 1.25rem;
+}
+
+.comments .list {
+	border-bottom: 0.25rem dashed rgba(31, 119, 201, 0.815);
+	border-top: 0.25rem dashed rgba(31, 119, 201, 0.815);
+	margin-top: 1rem;
+	color: rgba(31, 119, 201, 0.815);
 }

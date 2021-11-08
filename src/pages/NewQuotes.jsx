@@ -17,8 +17,6 @@ const NewQuote = (props) => {
 
 	const addQuoteHandler = (quoteData) => {
 		sendRequest(quoteData);
-
-		history.push('/quotes');
 	};
 
 	if (status === 'pending') {
